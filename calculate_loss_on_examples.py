@@ -11,7 +11,7 @@ from tqdm import tqdm
 ATTRIBUTES = ["focus", "local_or_sum"]
 
 TASK = "steerlm" # orso steerlm
-FILENAME = "EMNLP-ORSO/reshaped_datasets/clean_new_fairytaleqa_train_steerlm_focus_local_or_sum.json"
+FILENAME = "EACL-ORSO/reshaped_datasets/clean_new_fairytaleqa_train_steerlm_focus_local_or_sum.json"
 
 dataset = json.load(open(FILENAME))
 start_index = 200000
