@@ -61,9 +61,9 @@ def make_prompts(examples):
     }
     return inputs
 
-#data_train = json.load(open("EMNLP-ORSO/reshaped_datasets/new_fairytaleqa_train.json"))
-data_train = json.load(open("EMNLP-ORSO/bootstrapped_datasets/clustered_filtered_orso_recompiled.json"))
-data_val = json.load(open("EMNLP-ORSO/reshaped_datasets/fairytaleqa_val.json"))
+#data_train = json.load(open("EACL-ORSO/reshaped_datasets/new_fairytaleqa_train.json"))
+data_train = json.load(open("EACL-ORSO/bootstrapped_datasets/clustered_filtered_orso_recompiled.json"))
+data_val = json.load(open("EACL-ORSO/reshaped_datasets/fairytaleqa_val.json"))
 
 random.shuffle(data_train)
 
