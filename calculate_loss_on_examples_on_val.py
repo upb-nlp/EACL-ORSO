@@ -14,8 +14,8 @@ random.seed(42)
 ATTRIBUTES = ["focus", "local_or_sum"]
 
 TASK = "steerlm" # orso steerlm
-#FILENAME = "EMNLP-ORSO/reshaped_datasets/new_fairytaleqa_train_orso_focus_local_or_sum.json"
-FILENAME = "EMNLP-ORSO/reshaped_datasets/fairytaleqa_val.json"
+#FILENAME = "EACL-ORSO/reshaped_datasets/new_fairytaleqa_train_orso_focus_local_or_sum.json"
+FILENAME = "EACL-ORSO/reshaped_datasets/fairytaleqa_val.json"
 
 dataset = json.load(open(FILENAME))
 
