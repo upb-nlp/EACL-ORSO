@@ -37,7 +37,7 @@ sampling_params = SamplingParams(
 tokenizer = AutoTokenizer.from_pretrained(model_name, padding_side="left", token=access_token)
 tokenizer.pad_token_id = 128002
 
-dataset_texts = json.load(open("EMNLP-ORSO/reshaped_datasets/fairytaleqa_val.json"))
+dataset_texts = json.load(open("EACL-ORSO/reshaped_datasets/fairytaleqa_val.json"))
 dataset_texts = [data['content'] for data in dataset_texts]
 dataset_texts = list(sorted(list(set(dataset_texts))))
 
@@ -130,4 +130,4 @@ for text in dataset_texts:
                     'logprobs': responses_logprobs[i],
                 })
 
-json.dump(dict_responses, open(f"EMNLP-ORSO/fairytaleqa_val_responses_{model_name.split('/')[-1]}.json", "w"), indent=4)
+json.dump(dict_responses, open(f"EACL-ORSO/fairytaleqa_val_responses_{model_name.split('/')[-1]}.json", "w"), indent=4)
