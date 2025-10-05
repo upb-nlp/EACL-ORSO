@@ -29,7 +29,7 @@ def cluster_texts(data, num_clusters=5000, model_name='all-MiniLM-L6-v2', use_mi
 
 TASK = 'steerlm' # 'steerlm' or 'orso'
 
-dataset = json.load(open(f"EMNLP-ORSO/reshaped_datasets/clean_new_fairytaleqa_train_{TASK}_focus_local_or_sum_with_loss_{TASK}_focus_local_or_sum.json"))
+dataset = json.load(open(f"EACL-ORSO/reshaped_datasets/clean_new_fairytaleqa_train_{TASK}_focus_local_or_sum_with_loss_{TASK}_focus_local_or_sum.json"))
 dataset_dict = {}
 
 for attr1 in sorted_attributes['focus']:
@@ -49,5 +49,5 @@ for (attr1, attr2), examples in dataset_dict.items():
         else:
             print(f"Empty cluster for attributes {attr1}, {attr2}")
         
-json.dump(new_dataset, open(f"EMNLP-ORSO/bootstrapped_datasets/clustered_filtered_{TASK}.json", "w"), indent=4)
+json.dump(new_dataset, open(f"EACL-ORSO/bootstrapped_datasets/clustered_filtered_{TASK}.json", "w"), indent=4)
     
