@@ -15,7 +15,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 ATTRIBUTE = "local_or_sum" # focus local_or_sum
 
 FILENAMES = [
-    "EMNLP-ORSO/new_fairytaleqa_train_responses_llama32_1b_steerlm_focus_local_or_sum_attribute.json",
+    "EACL-ORSO/new_fairytaleqa_train_responses_llama32_1b_steerlm_focus_local_or_sum_attribute.json",
 ]
 
 set_labels = sorted_attributes[ATTRIBUTE]
@@ -64,4 +64,4 @@ for filename in FILENAMES:
             p = "NO RESPONSE"
         d[f"predicted_{ATTRIBUTE}"] = p
 
-    json.dump(dataset, open(f"EMNLP-ORSO/{NAME}.json", "w"), indent=4)
+    json.dump(dataset, open(f"EACL-ORSO/{NAME}.json", "w"), indent=4)
