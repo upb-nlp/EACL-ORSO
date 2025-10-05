@@ -3,15 +3,15 @@ import plotly.graph_objects as go
 
 MOMENT = '_after_clustering' # _after_clustering
 
-data_orso_chosen = json.load(open(f"EMNLP-ORSO/reshaped_datasets/fairytaleqa_val_with_loss{MOMENT}_orso_focus_local_or_sum.json"))
+data_orso_chosen = json.load(open(f"EACL-ORSO/reshaped_datasets/fairytaleqa_val_with_loss{MOMENT}_orso_focus_local_or_sum.json"))
 data_orso_chosen = [d['loss'] for d in data_orso_chosen]
 
-data_orso_rejected = json.load(open(f"EMNLP-ORSO/reshaped_datasets/fairytaleqa_val_with_loss_negative{MOMENT}_orso_focus_local_or_sum.json"))
+data_orso_rejected = json.load(open(f"EACL-ORSO/reshaped_datasets/fairytaleqa_val_with_loss_negative{MOMENT}_orso_focus_local_or_sum.json"))
 data_orso_rejected = [d['loss'] for d in data_orso_rejected]
 
-data_steerlm_chosen = json.load(open(f"EMNLP-ORSO/reshaped_datasets/fairytaleqa_val_with_loss{MOMENT}_steerlm_focus_local_or_sum.json"))
+data_steerlm_chosen = json.load(open(f"EACL-ORSO/reshaped_datasets/fairytaleqa_val_with_loss{MOMENT}_steerlm_focus_local_or_sum.json"))
 data_steerlm_chosen = [d['loss'] for d in data_steerlm_chosen]
-data_steerlm_rejected = json.load(open(f"EMNLP-ORSO/reshaped_datasets/fairytaleqa_val_with_loss_negative{MOMENT}_steerlm_focus_local_or_sum.json"))
+data_steerlm_rejected = json.load(open(f"EACL-ORSO/reshaped_datasets/fairytaleqa_val_with_loss_negative{MOMENT}_steerlm_focus_local_or_sum.json"))
 data_steerlm_rejected = [d['loss'] for d in data_steerlm_rejected]
 
 # Plot data_orso_chosen and data_orso_rejected on the same plot as histograms
@@ -47,7 +47,7 @@ fig.update_layout(
         range=[0, 0.03],
     ),
 )
-fig.write_image(f"EMNLP-ORSO/orso_chosen_vs_rejected{MOMENT}.png")
+fig.write_image(f"EACL-ORSO/orso_chosen_vs_rejected{MOMENT}.png")
 
 fig = go.Figure()
 fig.add_trace(go.Histogram(
@@ -81,4 +81,4 @@ fig.update_layout(
         range=[0, 0.03],
     ),
 )
-fig.write_image(f"EMNLP-ORSO/steerlm_chosen_vs_rejected{MOMENT}.png")
+fig.write_image(f"EACL-ORSO/steerlm_chosen_vs_rejected{MOMENT}.png")
