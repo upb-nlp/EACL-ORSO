@@ -3,7 +3,7 @@ from sklearn.metrics import f1_score, accuracy_score
 
 ATTRIBUTE = "local_or_sum" # focus local_or_sum
 
-dataset = json.load(open(f"EMNLP-ORSO/classifier_experiments/fairytaleqa_test_predictions_{ATTRIBUTE}.json"))
+dataset = json.load(open(f"EACL-ORSO/classifier_experiments/fairytaleqa_test_predictions_{ATTRIBUTE}.json"))
 
 predicted = [d[f"predicted_{ATTRIBUTE}"] for d in dataset]
 gold = [d[ATTRIBUTE] for d in dataset]
