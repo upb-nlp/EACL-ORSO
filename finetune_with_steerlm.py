@@ -46,9 +46,9 @@ def tokenize_function(examples):
     return inputs
 
 
-#data_train = json.load(open("EMNLP-ORSO/reshaped_datasets/fairytaleqa_train.json"))
-data_train = json.load(open("EMNLP-ORSO/bootstrapped_datasets/clustered_filtered_steerlm_recompiled.json"))
-data_val = json.load(open("EMNLP-ORSO/reshaped_datasets/fairytaleqa_val.json"))
+#data_train = json.load(open("EACL-ORSO/reshaped_datasets/fairytaleqa_train.json"))
+data_train = json.load(open("EACL-ORSO/bootstrapped_datasets/clustered_filtered_steerlm_recompiled.json"))
+data_val = json.load(open("EACL-ORSO/reshaped_datasets/fairytaleqa_val.json"))
 
 random.shuffle(data_train)
 
