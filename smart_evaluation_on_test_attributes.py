@@ -5,12 +5,12 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
 
-test_dataset = json.load(open("EMNLP-ORSO/reshaped_datasets/fairytaleqa_test.json"))
+test_dataset = json.load(open("EACL-ORSO/reshaped_datasets/fairytaleqa_test.json"))
 
 METHOD = 'orso' # orso steerlm
 print(f"------------------------{METHOD}------------------------")
 
-dataset = json.load(open(f"EMNLP-ORSO/final_classification/fairytaleqa_test_responses_llama32_1b_{METHOD}_focus_local_or_sum_attribute.json"))
+dataset = json.load(open(f"EACL-ORSO/final_classification/fairytaleqa_test_responses_llama32_1b_{METHOD}_focus_local_or_sum_attribute.json"))
 
 new_dataset = []
 set_test = set()
