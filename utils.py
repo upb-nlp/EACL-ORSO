@@ -1,5 +1,5 @@
 import json
-dataset = json.load(open("EMNLP-ORSO/reshaped_datasets/fairytaleqa_train.json"))
+dataset = json.load(open("EACL-ORSO/reshaped_datasets/fairytaleqa_train.json"))
 sorted_attributes = {
     'focus': list(sorted(list(set([data['focus'] for data in dataset])))),
     'local_or_sum': list(sorted(list(set([data['local_or_sum'] for data in dataset])))),
