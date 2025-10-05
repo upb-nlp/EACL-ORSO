@@ -1,9 +1,9 @@
 import json
 from utils import sorted_attributes
-initial_dataset = json.load(open("EMNLP-ORSO/reshaped_datasets/fairytaleqa_train.json"))
+initial_dataset = json.load(open("EACL-ORSO/reshaped_datasets/fairytaleqa_train.json"))
 
-new_dataset_steerlm = json.load(open("EMNLP-ORSO/new_fairytaleqa_train_responses_llama32_1b_steerlm_focus_local_or_sum_attribute.json"))
-new_dataset_orso = json.load(open("EMNLP-ORSO/new_fairytaleqa_train_responses_llama32_1b_orso_focus_local_or_sum_attribute.json"))
+new_dataset_steerlm = json.load(open("EACL-ORSO/new_fairytaleqa_train_responses_llama32_1b_steerlm_focus_local_or_sum_attribute.json"))
+new_dataset_orso = json.load(open("EACL-ORSO/new_fairytaleqa_train_responses_llama32_1b_orso_focus_local_or_sum_attribute.json"))
 
 new_dataset_orso = [data for data in new_dataset_orso if data['focus'] == data['predicted_focus'] and data['local_or_sum'] == data['predicted_local_or_sum']]
 new_dataset_steerlm = [data for data in new_dataset_steerlm if data['focus'] == data['predicted_focus'] and data['local_or_sum'] == data['predicted_local_or_sum']]
