@@ -12,8 +12,8 @@ from tqdm import tqdm
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-dataset = json.load(open("EMNLP-ORSO/reshaped_datasets/fairytaleqa_test.json"))
-data_train = json.load(open("EMNLP-ORSO/reshaped_datasets/fairytaleqa_train.json"))
+dataset = json.load(open("EACL-ORSO/reshaped_datasets/fairytaleqa_test.json"))
+data_train = json.load(open("EACL-ORSO/reshaped_datasets/fairytaleqa_train.json"))
 
 ATTRIBUTE = "local_or_sum" # focus local_or_sum
 
@@ -56,4 +56,4 @@ for i in tqdm(range(0, len(prompts), batch_size)):
 for p, d in zip(predictions, dataset):
     d[f"predicted_{ATTRIBUTE}"] = p
 
-json.dump(dataset, open(f"EMNLP-ORSO/classifier_experiments/fairytaleqa_test_predictions_{ATTRIBUTE}.json", "w"), indent=4)
+json.dump(dataset, open(f"EACL-ORSO/classifier_experiments/fairytaleqa_test_predictions_{ATTRIBUTE}.json", "w"), indent=4)
