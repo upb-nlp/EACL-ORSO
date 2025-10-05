@@ -1,12 +1,12 @@
 import json
 import plotly.graph_objects as go
 
-test_dataset = json.load(open("EMNLP-ORSO/reshaped_datasets/fairytaleqa_val.json"))
+test_dataset = json.load(open("EACL-ORSO/reshaped_datasets/fairytaleqa_val.json"))
 
 METHOD = 'orso' # orso steerlm
 print(f"------------------------{METHOD}------------------------")
 
-dataset = json.load(open(f"EMNLP-ORSO/fairytaleqa_val_responses_llama32_1b_after_clustering_{METHOD}_focus_local_or_sum_attribute.json"))
+dataset = json.load(open(f"EACL-ORSO/fairytaleqa_val_responses_llama32_1b_after_clustering_{METHOD}_focus_local_or_sum_attribute.json"))
 
 sure_dataset = []
 set_test = set()
@@ -62,4 +62,4 @@ fig.update_layout(
         tickmode='auto'  # or use tickmode='linear', dtick=0.2
     ),
 )
-fig.write_image(f"EMNLP-ORSO/{METHOD}_Val_Sure_vs_Unsure_after_clustering.png")
+fig.write_image(f"EACL-ORSO/{METHOD}_Val_Sure_vs_Unsure_after_clustering.png")
