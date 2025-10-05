@@ -18,8 +18,8 @@ def make_confusion_matrix(gold, predicted):
 METHOD = 'steerlm' # orso steerlm
 print(f"------------------------{METHOD}------------------------")
 
-dataset = json.load(open(f"EMNLP-ORSO/final_classification/fairytaleqa_test_responses_llama32_1b_{METHOD}_focus_local_or_sum_attribute.json"))
-#dataset = json.load(open(f"EMNLP-ORSO/final_classification/fairytaleqa_test_responses_llama32_1b_after_clustering_{METHOD}_focus_local_or_sum_attribute.json"))
+dataset = json.load(open(f"EACL-ORSO/final_classification/fairytaleqa_test_responses_llama32_1b_{METHOD}_focus_local_or_sum_attribute.json"))
+#dataset = json.load(open(f"EACL-ORSO/final_classification/fairytaleqa_test_responses_llama32_1b_after_clustering_{METHOD}_focus_local_or_sum_attribute.json"))
 
 """
 if METHOD == "steerlm":
