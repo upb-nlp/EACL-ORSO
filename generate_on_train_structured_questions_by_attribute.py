@@ -31,7 +31,7 @@ sampling_params = SamplingParams(
     top_p=0.9,
     min_p=0.2,
 )
-dataset_texts = json.load(open("EMNLP-ORSO/reshaped_datasets/fairytaleqa_train.json"))
+dataset_texts = json.load(open("EACL-ORSO/reshaped_datasets/fairytaleqa_train.json"))
 dataset_texts = [data['content'] for data in dataset_texts]
 dataset_texts = list(sorted(list(set(dataset_texts))))
 
@@ -87,4 +87,4 @@ for i in tqdm(range(0, len(messages_list), batch_size)):
     del completion
     
 
-json.dump(new_dataset, open(f"EMNLP-ORSO/new_fairytaleqa_train_responses_{model_name.split('/')[-1]}.json", "w"), indent=4)
+json.dump(new_dataset, open(f"EACL-ORSO/new_fairytaleqa_train_responses_{model_name.split('/')[-1]}.json", "w"), indent=4)
